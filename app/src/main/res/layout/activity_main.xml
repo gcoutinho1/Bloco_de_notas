@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        app:srcCompat="@drawable/logo" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/textoid"
+        android:layout_width="320dp"
+        android:layout_height="360dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:background="@drawable/fundo_anotacao"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textPersonName"
+        android:paddingBottom="5dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/texto_anotacao" />
+
+    <ImageView
+        android:id="@+id/botaoSalvarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/textoid"
+        app:srcCompat="@drawable/botao_salvar" />
+</RelativeLayout>
